@@ -169,9 +169,11 @@ body {
    color: black;
    text-align: left;
  }
+ 
  .auth-links a {
    color: black;
  }
+ 
  .register-text {
    text-align: right;
  }
@@ -180,4 +182,9 @@ body {
    width: 22rem;
    margin: 0 auto;
    float: none;
+ }
+ 
+ .app-nav span {
+   margin-left: 15px;
+   margin-right: 15px;
  }
