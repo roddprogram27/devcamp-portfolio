@@ -7,10 +7,28 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "ninja kiwi logo.png", width: 300, alt: "profile image", class: 'profile-img' %>
+        
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%=skill.title %></h4>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     
       <div class="col-md-8">
-        <p>I recently graduated from Cyprus High School as a valedictorian, and I am currently enrolled in the Code To Success program.</p>
+        <p>I recently graduated from Cyprus High School as a valedictorian, and I am currently enrolled in the Code To Success program. Here is some extra text so that I can test the margins and how the progress bars will be handled within the About Me card area.</p>
+        <p>Once again, here is some more test text to demonstrate the effects of multiple paragraphs on the organization of the card area. I am hoping that this will help to adjust to the correct layout.</p>
         
         <p>
           <button
